@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>PBAR Designs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,11 +72,20 @@
             font-size: 1em;
             cursor: pointer;
         }
+        .projects-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+        }
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #bf4f43;
+            margin-bottom: 30px;
+        }
         .projects {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
         }
         .project-card {
             background-color: white;
@@ -86,6 +95,7 @@
             padding: 15px;
             width: 300px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         .project-card img {
             max-width: 100%;
@@ -100,11 +110,17 @@
             color: #555;
         }
         .project-card a {
-            display: block;
+            display: inline-block;
             margin-top: 10px;
-            color: #bf4f43;
+            color: white;
+            background-color: #bf4f43;
+            padding: 10px 15px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
+        }
+        .project-card a:hover {
+            background-color: #a33d34;
         }
         footer {
             text-align: center;
@@ -117,7 +133,7 @@
 </head>
 <body>
 <header>
-    <h1>Your Name</h1>
+    <h1>PBAR Designs</h1>
     <div class="keywords">
         <span class="creativity">Creativity</span>
         <span class="growth">Growth</span>
@@ -134,20 +150,23 @@
 <div class="hero">
     <h2>What do you want?</h2>
     <p>What can I design for you?</p>
-    <button onclick="location.href='#portfolio'">View My Work</button>
 </div>
 
-<section id="portfolio" class="projects">
-    <div class="project-card">
-        <img src="/mnt/data/IMG_0235.jpg" alt="Friday">
-        <h3>Friday</h3>
-        <p>A service designed to help young adults turn their manifestations into actionable, achievable plans.</p>
-        <a href="friday.html">Go to Friday App</a>
+<!-- Projects Section -->
+<section id="portfolio" class="projects-section">
+    <h2>Our Projects</h2>
+    <div class="projects">
+        <div class="project-card">
+            <img src="/Images/IMG_0235.jpg" alt="Friday">
+            <h3>Friday</h3>
+            <p>A service designed to help young adults turn their manifestations into actionable, achievable plans.</p>
+            <a href="friday.html">Go to Friday App</a>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>&copy; 2024 PBAR Designs. All rights reserved.</p>
 </footer>
 </body>
 </html>
