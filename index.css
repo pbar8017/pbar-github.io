@@ -1,153 +1,283 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #fff;
+    line-height: 1.6; /* Slightly tighter line spacing */
+    min-height: 100vh;
 }
 
+/* Header */
 header {
     background-color: #bf4f43;
     color: white;
-    padding: 20px;
+    padding: 15px 20px;
     text-align: center;
+    min-height: 10vh;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-}
-
-nav {
-    margin-top: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
+    font-size: 3.5em; /* Slightly smaller */
+    margin-bottom: 5px;
 }
 
 .keywords {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    font-size: 1.5em;
-    gap: 20px;
+    margin-top: 10px;
+    font-size: 2em; /* Adjusted keyword size */
+    gap: 15px; /* Reduced spacing */
+    flex-wrap: wrap;
 }
 
-.keywords span {
-    color: white;
-    font-weight: bold;
+/* Navigation Buttons */
+nav {
+    margin-top: 10px;
 }
 
-.keywords .creativity { color: #c2a4a1; }
-.keywords .growth { color: white; }
-.keywords .innovation { color: #c2a4a1; }
-.keywords .purpose { color: white; }
+nav a {
+    display: inline-block;
+    background-color: white; /* White background for buttons */
+    color: #bf4f43; /* Header color for text */
+    text-decoration: none;
+    padding: 10px 20px; /* Comfortable padding */
+    margin: 0 10px; /* Space between buttons */
+    border: 2px solid #bf4f43; /* Border matching the header */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1.2em; /* Slightly larger text */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+nav a:hover {
+    background-color: #bf4f43; /* Match header background */
+    color: white; /* White text on hover */
+}
+
+/* Hero Section (What do you want?) */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 40px 20px; /* Reduced padding */
     background-color: #c2a4a1;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh; /* Reduced height */
 }
 
 .hero h2 {
-    font-size: 3.5em;
-    margin: 0 0 20px;
+    font-size: 3.8em; /* Adjusted heading size */
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.5em;
-    margin: 0 0 30px;
+    font-size: 1.5em; /* Reduced text size */
+    margin-bottom: 15px;
+}
+
+.arrow-container {
+    position: relative;
+    margin-bottom: 15px; /* Space between arrows and buttons */
+}
+
+.arrow {
+    display: block; /* Ensure arrows are above buttons */
+    font-size: 4em; /* Adjusted arrow size */
+    color: white;
+    margin: 5px auto; /* Center-align arrows */
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reduced button spacing */
+    flex-wrap: wrap;
 }
 
 .hero button {
     background-color: #bf4f43;
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 15px 40px; /* Smaller button size */
+    font-size: 1.3em; /* Smaller button text */
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero button:hover {
     background-color: #a33d34;
+    transform: scale(1.05);
 }
 
+/* Projects Section */
 .projects-section {
     background-color: #f9f9f9;
-    padding: 50px 20px;
+    padding: 60px 20px; /* Reduced padding */
+    text-align: center;
+    min-height: 60vh; /* Adjusted height */
 }
 
 .projects-section h2 {
-    text-align: center;
-    font-size: 2em;
+    font-size: 3em; /* Adjusted heading size */
     color: #bf4f43;
     margin-bottom: 30px;
 }
 
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjusted card size */
+    gap: 20px; /* Reduced gap between cards */
+    justify-items: center;
+    align-items: start;
+    padding: 0 20px;
 }
 
 .project-card {
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
     text-align: center;
+    padding: 30px; /* Reduced padding */
+    width: 100%;
+    max-width: 500px; /* Adjusted card size */
 }
 
 .project-card img {
-    max-width: 100%;
-    border-radius: 5px;
+    max-width: 90%; /* Slightly smaller image */
+    height: auto;
+    margin-bottom: 15px; /* Reduced margin */
+    border-radius: 6px;
 }
 
 .project-card h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 2em; /* Adjusted title size */
+    color: #bf4f43;
+    margin-bottom: 15px;
 }
 
 .project-card p {
-    font-size: 0.9em;
+    font-size: 1.2em; /* Adjusted description size */
     color: #555;
+    margin-bottom: 15px;
 }
 
 .project-card a {
     display: inline-block;
-    margin-top: 10px;
+    padding: 15px 30px; /* Adjusted button size */
     color: white;
     background-color: #bf4f43;
-    padding: 10px 15px;
-    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1.3em; /* Adjusted button text */
+    transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
     background-color: #a33d34;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #bf4f43;
     color: white;
-    margin-top: 20px;
+    min-height: 8vh;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    .hero h2 {
+        font-size: 3.5em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+
+    .arrow {
+        font-size: 3em; /* Adjusted arrow size */
+    }
+
+    .projects-section h2 {
+        font-size: 2.5em;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-card h3 {
+        font-size: 1.8em;
+    }
+
+    .project-card p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .keywords {
+        font-size: 1.8em;
+    }
+
+    .hero h2 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .arrow {
+        font-size: 2.5em; /* Adjusted arrow size */
+    }
+
+    .hero button {
+        padding: 12px 30px;
+        font-size: 1.2em;
+    }
+
+    .projects-section h2 {
+        font-size: 2.3em;
+    }
+
+    .project-card {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .project-card h3 {
+        font-size: 1.6em;
+    }
+
+    .project-card p {
+        font-size: 1em;
+    }
+
+    .project-card a {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
 }
