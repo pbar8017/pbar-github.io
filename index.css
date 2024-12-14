@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    background-color: #bf4f43;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.keywords {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    gap: 20px;
+}
+
+.keywords span {
+    color: white;
+    font-weight: bold;
+}
+
+.keywords .creativity { color: #c2a4a1; }
+.keywords .growth { color: white; }
+.keywords .innovation { color: #c2a4a1; }
+.keywords .purpose { color: white; }
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #c2a4a1;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 0 0 30px;
+}
+
+.hero button {
+    background-color: #bf4f43;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #a33d34;
+}
+
+.projects-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #bf4f43;
+    margin-bottom: 30px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background-color: #bf4f43;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    background-color: #a33d34;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #bf4f43;
+    color: white;
+    margin-top: 20px;
+}
