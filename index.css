@@ -128,64 +128,64 @@ nav a:hover {
 /* Projects Section */
 .projects-section {
     background-color: #f9f9f9;
-    padding: 60px 20px; /* Reduced padding */
+    padding: 40px 15px; /* Reduced padding */
     text-align: center;
-    min-height: 60vh; /* Adjusted height */
+    min-height: 40vh; /* Smaller section height */
 }
 
 .projects-section h2 {
-    font-size: 3em; /* Adjusted heading size */
+    font-size: 2.5em; /* Reduced heading size */
     color: #bf4f43;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjusted card size */
-    gap: 20px; /* Reduced gap between cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted card size */
+    gap: 15px; /* Reduced gap between cards */
     justify-items: center;
     align-items: start;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .project-card {
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
     text-align: center;
-    padding: 30px; /* Reduced padding */
+    padding: 20px; /* Reduced padding */
     width: 100%;
-    max-width: 500px; /* Adjusted card size */
+    max-width: 350px; /* Smaller card width */
 }
 
 .project-card img {
-    max-width: 90%; /* Slightly smaller image */
+    max-width: 85%; /* Reduced image size */
     height: auto;
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 10px; /* Reduced margin */
     border-radius: 6px;
 }
 
 .project-card h3 {
-    font-size: 2em; /* Adjusted title size */
+    font-size: 1.8em; /* Smaller title size */
     color: #bf4f43;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .project-card p {
-    font-size: 1.2em; /* Adjusted description size */
+    font-size: 1.1em; /* Reduced description size */
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .project-card a {
     display: inline-block;
-    padding: 15px 30px; /* Adjusted button size */
+    padding: 10px 20px; /* Smaller button size */
     color: white;
     background-color: #bf4f43;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.3em; /* Adjusted button text */
+    font-size: 1.1em; /* Reduced button text size */
     transition: background-color 0.3s ease;
 }
 
@@ -204,80 +204,44 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-    header h1 {
-        font-size: 3em;
-    }
-
-    .hero h2 {
-        font-size: 3.5em;
-    }
-
-    .hero p {
-        font-size: 1.3em;
-    }
-
-    .arrow {
-        font-size: 3em; /* Adjusted arrow size */
-    }
-
     .projects-section h2 {
-        font-size: 2.5em;
+        font-size: 2.3em; /* Adjusted heading size */
     }
 
     .project-card {
-        padding: 25px;
+        padding: 15px; /* Adjusted padding for smaller screens */
     }
 
     .project-card h3 {
-        font-size: 1.8em;
+        font-size: 1.6em; /* Adjusted title size */
     }
 
     .project-card p {
-        font-size: 1.1em;
+        font-size: 1em; /* Adjusted description size */
     }
 }
 
 @media (max-width: 768px) {
-    .keywords {
-        font-size: 1.8em;
-    }
-
-    .hero h2 {
-        font-size: 3em;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-
-    .arrow {
-        font-size: 2.5em; /* Adjusted arrow size */
-    }
-
-    .hero button {
-        padding: 12px 30px;
-        font-size: 1.2em;
-    }
-
     .projects-section h2 {
-        font-size: 2.3em;
+        font-size: 2em; /* Adjusted heading size */
     }
 
     .project-card {
-        padding: 20px;
-        max-width: 100%;
+        padding: 10px; /* Reduced padding */
+        max-width: 100%; /* Full width for smaller screens */
     }
 
     .project-card h3 {
-        font-size: 1.6em;
+        font-size: 1.5em; /* Adjusted title size */
     }
 
     .project-card p {
-        font-size: 1em;
+        font-size: 0.9em; /* Adjusted description size */
     }
 
     .project-card a {
-        font-size: 1.2em;
-        padding: 12px 25px;
+        font-size: 1em; /* Adjusted button text size */
+        padding: 8px 15px; /* Smaller button padding */
     }
 }
+

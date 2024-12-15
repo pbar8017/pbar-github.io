@@ -1,0 +1,119 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #1976d2;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Main Section */
+main{
+    padding: 10px;
+}
+
+/* Feature Section */
+.feature-section {
+    position: relative;
+    height: 300px; /* Section height */
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover; /* Make the background cover the whole section */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.feature-section:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.feature-section .content {
+    position: relative;
+    z-index: 2; /* Ensure text is above the background image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.feature-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.feature-section p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.feature-section .section-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #0d47a1;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.feature-section .section-link:hover {
+    background-color: #1976d2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1976d2;
+    color: white;
+    min-height: 8vh;
+}
+/* Navigation Buttons */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: white; /* White background for buttons */
+    color: #1976d2; /* Header color for text */
+    text-decoration: none;
+    padding: 10px 20px; /* Comfortable padding */
+    margin: 0 10px; /* Space between buttons */
+    border: 2px solid #1976d2; /* Border matching the header */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1.2em; /* Slightly larger text */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1976d2; /* Match header background */
+    color: white; /* White text on hover */
+}
