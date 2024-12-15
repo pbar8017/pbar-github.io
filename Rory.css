@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -8,36 +8,12 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation Buttons */
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    display: inline-block;
-    background-color: white; /* White background for buttons */
-    color: #bf4f43; /* Header color for text */
-    text-decoration: none;
-    padding: 10px 20px; /* Comfortable padding */
-    margin: 0 10px; /* Space between buttons */
-    border: 2px solid #bf4f43; /* Border matching the header */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 1.2em; /* Slightly larger text */
-    font-weight: bold; /* Bold text for emphasis */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #bf4f43; /* Match header background */
-    color: white; /* White text on hover */
-}
-
 /* Header */
 header {
     background-color: #bf4f43; /* Deep red */
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
 }
 
 header h1 {
@@ -54,7 +30,6 @@ header h1 {
     flex-wrap: wrap;
 }
 
-/* Navigation */
 nav {
     margin-top: 10px;
 }
@@ -83,7 +58,6 @@ nav a:hover {
     background-color: #fff;
     padding: 50px 20px;
     text-align: center;
-    color: #333;
 }
 
 .projects-section h2 {
@@ -134,36 +108,47 @@ nav a:hover {
     color: #555;
 }
 
+/* Video Container */
+.video-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Match project card shadow */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Match hover shadow */
+}
+
+.video-container h3 {
+    font-size: 1.8em;
+    color: #bf4f43; /* Matches project card heading color */
+    margin-bottom: 10px; /* Space before the description */
+}
+
+.video-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px; /* Space before the video */
+}
+
+.video-container video {
+    width: 100%; /* Full-width video */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+}
+
+
 /* Footer */
 footer {
     background-color: #bf4f43;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
     font-size: 1em;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    .keywords {
-        font-size: 1.2em;
-        gap: 10px;
-    }
-
-    .projects-section h2 {
-        font-size: 2em;
-    }
-
-    .project-card h3 {
-        font-size: 1.5em;
-    }
-
-    .project-card p {
-        font-size: 1em;
-    }
 }
