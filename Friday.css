@@ -1,102 +1,302 @@
-/* General Styling */
+/* Global Styles */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #87CEEB; /* Sky Blue */
-    color: #FFFFFF; /* White Text */
-}
-
-/* Container */
-.container {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Header Image (Main Picture) */
-.header-image {
-    width: 30%; /* Reduce the width to make it smaller */
-    max-width: 400px; /* Set a maximum width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-/* Headline */
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Subheadline */
-.subheadline {
-    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #e3f2fd; /* Blue theme */
     line-height: 1.6;
-    margin: 0 10%;
 }
 
-/* Horizontal Sections */
+/* Header */
+header {
+    background-color: #1976d2; /* Blue theme */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #fff;
+    margin: 0;
+}
+
+/* Navigation Buttons */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: white; /* White background for buttons */
+    color: #1976d2; /* Header color for text */
+    text-decoration: none;
+    padding: 10px 20px; /* Comfortable padding */
+    margin: 0 10px; /* Space between buttons */
+    border: 2px solid #1976d2; /* Border matching the header */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1.2em; /* Slightly larger text */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1976d2; /* Match header background */
+    color: white; /* White text on hover */
+}
+
+.keywords {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 1.5em;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+/* Buttons Below Keywords */
+.button-container {
+    display: flex;
+    justify-content: center; /* Align buttons horizontally */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.button-container a {
+    display: inline-block;
+    background-color: white;
+    color: #1976d2;
+    text-decoration: none;
+    padding: 8px 15px; /* Button size */
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    font-size: 0.85em; /* Button text size */
+    font-weight: bold;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.button-container a:hover {
+    opacity: 0.7; /* Hover effect */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Main Container */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 2em;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: top;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #0d47a1;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+h2.subheading {
+    font-size: 1.8em;
+    color: #1976d2;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.subheadline {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Process Section */
+.process-container {
+    background-color: #e3f2fd; /* Blue theme */
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 2px solid #90caf9;
+    text-align: center;
+}
+
+.process-container h2 {
+    font-size: 2em;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
 .horizontal-sections {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    padding: 20px;
-    gap: 20px;
+    gap: 30px;
+    align-items: center; /* Center aligns arrows vertically */
+    padding: 10px 0;
 }
 
-/* Individual Section */
 .section {
+    flex: none;
+    width: 220px;
+    min-height: 350px;
     text-align: center;
-    background-color: #FFFFFF;
-    color: #333;
-    padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
-    flex: 0 0 auto; /* Prevent shrinking */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Image */
-.section-image {
-    width: 150px; /* Set consistent width */
-    height: 150px; /* Set consistent height */
-    object-fit: cover; /* Ensures the image scales properly while filling the dimensions */
-    margin-bottom: 10px;
-    border-radius: 10px; /* Optional: Round the corners */
-}
-
-/* Section Heading and Text */
-.section h2 {
-    font-size: 1.2rem;
+.section img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.section p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-/* Learn More Link */
 .section a {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #87CEEB;
-    color: #FFFFFF;
+    color: #1976d2;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-weight: bold;
 }
 
-.section a:hover {
-    background-color: #5aa1d8;
-}
-
-/* Arrow Between Sections */
 .arrow {
-    font-size: 2rem;
-    color: #FFFFFF;
-    flex: 0 0 auto;
+    font-size: 2.5em;
+    color: #1976d2;
+    align-self: center; /* Centers the arrows */
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #e3f2fd; /* Blue theme */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid #90caf9;
+    border-bottom: 3px solid #90caf9;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border: 2px solid #bbdefb; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+    padding: 20px;
+    max-width: 700px; /* Limit card width */
+    width: 100%;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 500px; /* Limit image width */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+.project-card h3.subheading {
+    font-size: 1.8em;
+    color: #0d47a1; /* Deep blue for text */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.project-card p {
+    font-size: 1.1em;
+    color: #424242; /* Neutral gray for text */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.projects-section-app {
+    background-color: #e3f2fd; /* Blue theme */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.projects-section-app {
+    background-color: #e3f2fd; /* Blue theme */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 20px;
+}
+
+.app-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #1976d2; /* Vibrant blue button */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.app-button:hover {
+    background-color: #0d47a1; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.app-heading {
+    font-size: 2em;
+    color: #1976d2; /* Vibrant blue for heading */
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1976d2;
+    color: white;
+    min-height: 8vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 10px;
+    }
+
+    .horizontal-sections {
+        flex-direction: column;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .arrow {
+        display: none; /* Hide arrows on smaller screens */
+    }
 }

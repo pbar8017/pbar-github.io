@@ -3,144 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friday App</title>
+    <title>Friday</title>
     <link rel="stylesheet" href="Friday.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e3f2fd;
-            color: #333;
-            line-height: 1.6;
-        }
-        nav {
-            background-color: #90caf9;
-            padding: 20px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.5em;
-            font-weight: bold;
-            border: 2px solid white;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-        .header-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: contain;
-            object-position: top;
-        }
-        h1 {
-            font-size: 3em;
-            color: #0d47a1;
-            font-weight: bold;
-            margin-top: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            text-transform: uppercase;
-        }
-        h2.subheading {
-            font-size: 1.8em;
-            color: #1976d2;
-            font-weight: normal;
-            margin-top: 10px;
-        }
-        .subheadline {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-        .horizontal-sections {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-            padding: 10px 0;
-        }
-        .section {
-            flex: none;
-            width: 200px;
-            min-height: 300px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 15px;
-            background-color: #fff;
-        }
-        .section img {
-            width: 100%;
-            max-height: 100px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-        .arrow {
-            font-size: 2em;
-            color: #1976d2;
-            align-self: center;
-        }
-        .section a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #1976d2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
-<nav>
-    <a href="index.html">PBAR Designs</a>
-</nav>
-<div class="container">
-    <h1>FRIDAY</h1>
-    <h2 class="subheading">The app that makes your life feel like the weekend Every Day</h2>
-    <img src="Images/IMG_0235.jpg" alt="Friday App Image" class="header-image">
+<!-- Header Section -->
+<header>
+    <h1>Friday</h1>
+    <div class="keywords">
+        <span>🎨 Creativity</span>
+        <span>🌱 Growth</span>
+        <span>⚙️ Innovation</span>
+        <span>☀️ Happiness</span>
+    </div>
+</header>
 
-    <h2>Our service will offer young adults a chance to unlock their wildest dreams by turning their manifestations into definable, actionable, and achievable plans.</h2>
+<!-- Portfolio Section -->
+<section id="portfolio" class="projects-section">
+    <div class="projects">
+        <div class="project-card">
+            <img src="Images/IMG_0235.jpg" alt="Friday App Main Image" class="header-image">
+            <h3 class="subheading">
+                Our service will offer young adults a chance to unlock their wildest dreams by turning their manifestations into definable, actionable, and achievable plans.
+            </h3>
+            <p>
+                Young adults wishing to clarify their desires are often reading books, asking peers and parents, watching documentaries, and using any other resource to research what options they have and how they should achieve it.
+                Young adults don’t need more resources; they have access to the internet. Instead, as our service will provide, young adults need to be able to consolidate their research and better externalize their thoughts so they can see a clearer future ahead of them and establish small achievable milestones to get them there.
+            </p>
+        </div>
+    </div>
+</section>
 
-    <p class="subheadline">
-        Young adults wishing to clarify their desires are often reading books, asking peers and parents, watching documentaries, and using any other resource to research what options they have and how they should achieve it.
-        Young adults don’t need more resources; they have access to the internet. Instead, as our service will provide, young adults need to be able to consolidate their research and better externalize their thoughts
-        so they can see a clearer future ahead of them and establish small achievable milestones to get them there.
-    </p>
+<!-- Access Friday App Section -->
+<section id="portfolio-app" class="projects-section-app">
+    <h2 class="app-heading">Access the Friday App Below</h2>
+    <div class="button-container">
+        <a href="index.html" class="app-button">☀️FRIDAY APP ☀️</a>
+    </div>
+</section>
+
+<!-- Process Section -->
+<div class="process-container">
+    <h2>The Friday Process</h2>
+    <div class="horizontal-sections">
+        <div class="section" id="vision-board">
+            <img src="Images/Lotus%20Diagram.png" alt="Vision Board">
+            <h3>Vision Board</h3>
+            <p>Explore the foundation of ideas.</p>
+            <a href="#vision-board">Learn More</a>
+        </div>
+        <div class="arrow">➡</div>
+        <div class="section" id="value-proposition">
+            <img src="Images/Vision.png" alt="Value Proposition">
+            <h3>Value Proposition</h3>
+            <p>Learn about creating value for users.</p>
+            <a href="#value-proposition">Learn More</a>
+        </div>
+        <div class="arrow">➡</div>
+        <div class="section" id="persona-map">
+            <img src="Images/persona.png" alt="Persona Map">
+            <h3>Persona Map</h3>
+            <p>Understand your target audience.</p>
+            <a href="#persona-map">Learn More</a>
+        </div>
+        <div class="arrow">➡</div>
+        <div class="section" id="prototype">
+            <img src="Images/prototype.jpg" alt="Prototype">
+            <h3>Prototype</h3>
+            <p>See how ideas come to life.</p>
+            <a href="#prototype">Learn More</a>
+        </div>
+    </div>
 </div>
-<div class="horizontal-sections">
-    <div class="section">
-        <img src="Images/Lotus%20Diagram.png" alt="Vision Board Image">
-        <h2>Vision Board</h2>
-        <p>Explore the Vision Board</p>
-        <a href="Friday%20Vision%20Board.html.html" target="_blank">Learn More</a>
-    </div>
-    <div class="arrow">&#8594;</div>
-    <div class="section">
-        <img src="Images/Vision.png" alt="Value Proposition Image">
-        <h2>Value Proposition</h2>
-        <p>Learn About Our Value Proposition</p>
-        <a href="Friday%20Value%20Proposition.html" target="_blank">Learn More</a>
-    </div>
-    <div class="arrow">&#8594;</div>
-    <div class="section">
-        <img src="Images/persona.png" alt="Persona Map Image">
-        <h2>Persona Map</h2>
-        <p>View the Persona Map</p>
-        <a href="Friday%20Persona%20Map.html" target="_blank">Learn More</a>
-    </div>
-    <div class="arrow">&#8594;</div>
-    <div class="section">
-        <img src="Images/prototype.jpg" alt="Prototype Image">
-        <h2>Prototype</h2>
-        <p>Check Out the Prototype</p>
-        <a href="Friday%20Protoype.html" target="_blank">Learn More</a>
-    </div>
-</div>
+
+<!-- Footer Section -->
+<footer>
+    <nav>
+        <a href="index.html">PBAR Designs</a>
+        <a href="about.html">About</a>
+    </nav>
+    <p>&copy; 2024 PBAR Designs. All rights reserved.</p>
+</footer>
 </body>
 </html>
