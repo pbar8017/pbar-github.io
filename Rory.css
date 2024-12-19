@@ -24,8 +24,8 @@ header h1 {
 .keywords {
     display: flex;
     justify-content: center;
-    margin: 10px 0;
     gap: 20px;
+    margin: 10px 0;
     font-size: 1.5em;
     flex-wrap: wrap;
 }
@@ -142,7 +142,6 @@ nav a:hover {
     height: auto;
     border-radius: 10px; /* Rounded corners */
 }
-
 
 /* Footer */
 footer {
