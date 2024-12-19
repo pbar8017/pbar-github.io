@@ -8,6 +8,65 @@ body {
     line-height: 1.6;
 }
 
+/* For the Login Process Section */
+.login-process .image-container {
+    display: flex;
+    justify-content: space-evenly; /* Space out the images evenly */
+    align-items: center;
+    gap: 30px; /* Increase spacing between images */
+}
+
+.login-process .image-box img {
+    width: 400px; /* Increase image size to 400px wide */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Subtle border for styling */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.process-navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e3f2fd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+}
+.process-navigation div {
+    text-align: center;
+}
+.process-navigation h3 {
+    color: #1976d2;
+    margin: 0 0 5px 0;
+}
+.process-navigation a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+/* For the Main Sections of the App */
+.main-sections .image-row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center images and arrows */
+    gap: 30px; /* Increase spacing between images and arrows */
+}
+
+.main-sections .image-box img {
+    width: 450px; /* Increase image size to 450px wide */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Subtle border for styling */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.arrow {
+    font-size: 3em; /* Increase arrow size */
+    color: #1976d2; /* Use theme color */
+}
+
 /* Header */
 header {
     background-color: #1976d2;
