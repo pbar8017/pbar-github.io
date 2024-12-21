@@ -7,28 +7,84 @@
 }
 
 .login-process .image-box img {
-    width: 400px; /* Increase image size to 400px wide */
+    width: 400px; /* Set image width */
     height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ddd; /* Subtle border for styling */
+    border: 1px solid #ddd; /* Add subtle border */
     border-radius: 5px; /* Optional: rounded corners */
 }
 
 /* For the Main Sections of the App */
 .main-sections .image-row {
     display: flex;
-    align-items: center;
+    align-items: center; /* Center-align items */
     justify-content: center; /* Center images and arrows */
     gap: 30px; /* Increase spacing between images and arrows */
 }
 
 .main-sections .image-box img {
-    width: 450px; /* Increase image size to 450px wide */
+    width: 450px; /* Set image width */
     height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ddd; /* Subtle border for styling */
+    border: 1px solid #ddd; /* Add subtle border */
     border-radius: 5px; /* Optional: rounded corners */
 }
 
 .arrow {
-    font-size: 3em; /* Increase arrow size */
-    color: #1976d2; /* Use theme color */
+    font-size: 3em; /* Set arrow size */
+    color: #1976d2; /* Use theme color for arrows */
 }
+
+/* For Smaller Images */
+.small-image {
+    max-width: 150px; /* Set the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+header {
+    background-color: #1976d2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.keywords {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.keywords span {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.projects-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 3px solid #bbdefb;
+}
+
+.projects-section-app {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e3f2fd;
+    border-top: 3px solid #90caf9;
+}
+
+
