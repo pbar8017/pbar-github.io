@@ -1,0 +1,129 @@
+/* General Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Goals Header */
+.goals-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.goals-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.goals-header .profile {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.goals-header .keywords {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.goals-header .keywords span {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.goals-header nav {
+    margin-top: 15px;
+}
+
+.goals-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.goals-header nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Filters, Goals, Templates, and Guided Creation */
+.filters, .recent-goals, .templates, .guided-creation {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.filter-buttons, .template-buttons, .categories {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.goal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.goal-item {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.goal-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

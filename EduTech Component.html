@@ -3,90 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduTech Insights</title>
-    <link rel="stylesheet" href="edutech.css">
+    <title>EduTech Resources</title>
+    <link rel="stylesheet" href="EduTech%20Component.css">
 </head>
 <body>
-<header>
-    <h1>Prototype</h1>
-    <div class="keywords">
-        <span class="creativity">🎨 Creativity</span>
-        <span class="growth">🌱 Growth</span>
-        <span class="innovation">⚙️ Innovation</span>
-        <span class="happiness">☀️ Happiness</span>
-    </div>
+<!-- PBAR Header -->
+<header class="pbar-header">
+    <h1>PBAR Designs</h1>
     <nav>
-        <a href="index.html">PBAR Designs</a>
+        <a href="index.html">Home</a>
         <a href="friday_home.html">Friday Home</a>
-        <a href="edutech.html">Friday EduTech</a>
+        <a href="edutech.html" class="active">EduTech</a>
+        <a href="social.html">Social</a>
+        <a href="goals.html">Goals</a>
     </nav>
 </header>
-<main>
-    <section>
-        <h2>Introduction</h2>
-        <p>
-            The EduTech component of the Friday app is designed to empower users through educational insights derived from real-world data.
-            This report highlights key trends and findings based on a comprehensive dataset, aiming to foster better decision-making
-            and inspire growth in various life domains.
-        </p>
-    </section>
 
-    <section>
-        <h2>Understanding Demotivation: Key Barriers</h2>
-        <p>
-            Based on user feedback, several recurring themes were identified as barriers to achieving personal and professional goals.
-        </p>
-        <h3>Qualitative Insights</h3>
-        <ul>
-            <li><strong>Time Constraints:</strong> Struggles with balancing responsibilities and goal-setting.</li>
-            <li><strong>Lack of Energy:</strong> Feeling too tired to take action on goals.</li>
-            <li><strong>Unclear Goals:</strong> Difficulty defining actionable objectives.</li>
-            <li><strong>External Obstacles:</strong> Challenges like bureaucracy and societal expectations.</li>
-            <li><strong>Self-Doubt:</strong> Low confidence and fear of failure.</li>
-            <li><strong>Monotony and Boredom:</strong> Loss of interest in repetitive tasks.</li>
-        </ul>
-    </section>
+<!-- Main Container -->
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <h1>Educational Resources</h1>
+        <input type="text" class="search-bar" placeholder="🔍 Search for resources...">
+    </header>
 
-    <section>
-        <h2>Key Trends and Insights</h2>
+    <!-- Educational Resources by Mode -->
+    <section class="resources-mode">
+        <h2>What do you want to learn?</h2>
         <div class="quadrants">
             <div class="quadrant">
-                <h3>Fitness Goals</h3>
-                <p>
-                    Users aim to build routines that enhance physical health and consistency. Accountability systems are seen as vital to success.
-                </p>
+                <img src="practice_goal_setting.jpg" alt="Practice Goal Setting">
+                <p>Practice Goal Setting</p>
             </div>
             <div class="quadrant">
-                <h3>Career Aspirations</h3>
-                <p>
-                    Focus is on achieving long-term career milestones with planning and perseverance, though external factors pose challenges.
-                </p>
+                <img src="articles.jpg" alt="Articles">
+                <p>Articles</p>
             </div>
             <div class="quadrant">
-                <h3>Skill Development</h3>
-                <p>
-                    Many seek to gain new creative or technical skills, often hindered by time constraints or a lack of resources.
-                </p>
+                <img src="podcasts.jpg" alt="Podcasts">
+                <p>Podcasts</p>
             </div>
             <div class="quadrant">
-                <h3>Personal Growth</h3>
-                <p>
-                    Goals centered around self-improvement, including better habits and mental health practices, dominate this category.
-                </p>
+                <img src="master_classes.jpg" alt="Master Classes">
+                <p>Master Classes</p>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Conclusion</h2>
-        <p>
-            The insights from this report highlight the diverse needs and aspirations of users. By addressing these trends, the EduTech component
-            can deliver personalized resources and tools to empower users on their journeys toward achieving their goals.
-        </p>
+    <!-- Last Viewed Section -->
+    <section class="last-viewed gallery-section">
+        <h2>Last Viewed</h2>
+        <div class="gallery">
+            <a href="podcast1.html" class="gallery-item">Recent Podcast</a>
+            <a href="masterclass1.html" class="gallery-item">Recent Master Class</a>
+            <a href="article1.html" class="gallery-item">Article</a>
+        </div>
     </section>
-</main>
-<footer>
-    <p>&copy; 2024 PBAR Designs. Empowering creativity, growth, and innovation.</p>
+
+    <!-- Recommended Section -->
+    <section class="recommended gallery-section">
+        <h2>Recommended</h2>
+        <div class="gallery">
+            <a href="podcast2.html" class="gallery-item">Recent Podcast</a>
+            <a href="article2.html" class="gallery-item">Article</a>
+            <a href="masterclass2.html" class="gallery-item">Recent Master Class</a>
+        </div>
+    </section>
+
+    <!-- New/Trending Section -->
+    <section class="new-trending gallery-section">
+        <h2>New/Trending</h2>
+        <div class="gallery">
+            <a href="podcast3.html" class="gallery-item">Recent Podcast</a>
+            <a href="article3.html" class="gallery-item">EduTech Article</a>
+            <a href="social_resource.html" class="gallery-item">Social Resource</a>
+        </div>
+    </section>
+
+    <!-- PBAR Footer -->
+<footer class="pbar-footer">
+    <p>&copy; 2025 PBAR Designs. All Rights Reserved.</p>
 </footer>
 </body>
 </html>

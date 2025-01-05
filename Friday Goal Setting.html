@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting Screen</title>
+    <link rel="stylesheet" href="Friday%20Goal%20Setting.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Set Your Goal</h1>
+        <div class="progress-bar">
+            <div class="progress" style="width: 33%;"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Brainstorming Section -->
+        <section class="brainstorming">
+            <h2>Brainstorm Your Goal</h2>
+            <div id="sticky-notes-container">
+                <!-- Sticky Notes will be dynamically added here -->
+            </div>
+            <button id="add-sticky-note">Add Sticky Note</button>
+        </section>
+
+        <!-- Define Goal Section -->
+        <section class="goal-definition">
+            <h2>Define Your Goal</h2>
+            <form id="goal-definition-form">
+                <label for="goal-title">Goal Title:</label>
+                <input type="text" id="goal-title" name="goal-title" placeholder="Type your goal title" required>
+
+                <label for="goal-activity">In one line, what is your activity?</label>
+                <input type="text" id="goal-activity" name="goal-activity" placeholder="Through doing activity X..." required>
+
+                <label for="goal-purpose">In one line, what are you trying to address?</label>
+                <input type="text" id="goal-purpose" name="goal-purpose" placeholder="You can address Y..." required>
+            </form>
+        </section>
+
+        <!-- Plan Your Journey Section -->
+        <section class="goal-activities">
+            <h2>Plan Your Journey</h2>
+            <p>Design the steps to achieve your goal:</p>
+            <ul id="steps-list">
+                <li>
+                    <input type="text" placeholder="Add a milestone..." class="milestone">
+                </li>
+            </ul>
+            <button id="add-step">Add Another Step</button>
+        </section>
+    </main>
+
+    <footer>
+        <button id="save-draft">Save Draft</button>
+        <button id="submit-goal">Submit Goal</button>
+    </footer>
+</div>
+
+<script>
+    // Sticky Notes Functionality
+    const stickyNotesContainer = document.getElementById("sticky-notes-container");
+    const addStickyNoteButton = document.getElementById("add-sticky-note");
+
+    addStickyNoteButton.addEventListener("click", () => {
+        const stickyNote = document.createElement("div");
+        stickyNote.classList.add("sticky-note");
+        stickyNote.contentEditable = true;
+        stickyNote.innerText = "Type your idea...";
+        stickyNotesContainer.appendChild(stickyNote);
+    });
+
+    // Add Steps Functionality
+    const stepsList = document.getElementById("steps-list");
+    const addStepButton = document.getElementById("add-step");
+
+    addStepButton.addEventListener("click", () => {
+        const newStep = document.createElement("li");
+        newStep.innerHTML = `<input type="text" placeholder="Add a milestone..." class="milestone">`;
+        stepsList.appendChild(newStep);
+    });
+
+    // Submit Data
+    document.getElementById("submit-goal").addEventListener("click", () => {
+        const goalData = {
+            title: document.getElementById("goal-title").value,
+            activity: document.getElementById("goal-activity").value,
+            purpose: document.getElementById("goal-purpose").value,
+            milestones: Array.from(document.querySelectorAll(".milestone")).map(input => input.value),
+            stickyNotes: Array.from(document.querySelectorAll(".sticky-note")).map(note => note.innerText)
+        };
+
+        fetch('/save-goal', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(goalData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert("Goal saved successfully!");
+            })
+            .catch(err => console.error(err));
+    });
+</script>
+</body>
+</html>

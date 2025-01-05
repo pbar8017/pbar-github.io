@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="WS-242.23339.15">
+    <data-source name="@localhost" uuid="47a0d69c-f31d-4ea6-a326-8f3132526373">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL_AURORA" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>pbar8017</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="HSQLDB (Local)" uuid="f98a3a0e-bede-4033-b351-80e7b01bda83">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="HSQLDB" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
