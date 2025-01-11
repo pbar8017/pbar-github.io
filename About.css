@@ -1,216 +1,153 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #1976d2, #42a5f5); /* Vibrant blue gradient */
     color: #333;
-    background-color: #c2a4a1; /* Soft beige background */
-    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Navigation Buttons */
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    display: inline-block;
-    background-color: white; /* White background for buttons */
-    color: #bf4f43; /* Header color for text */
-    text-decoration: none;
-    padding: 10px 20px; /* Comfortable padding */
-    margin: 0 10px; /* Space between buttons */
-    border: 2px solid #bf4f43; /* Border matching the header */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 1.2em; /* Slightly larger text */
-    font-weight: bold; /* Bold text for emphasis */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #bf4f43; /* Match header background */
-    color: white; /* White text on hover */
-}
-
-/* Header */
+/* Header Section */
 header {
-    background-color: #bf4f43; /* Deep red */
-    color: white;
-    padding: 20px 0;
     text-align: center;
+    background-color: #1976d2;
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 3em;
-    margin: 0;
+    font-size: 2.5rem;
+    margin: 10px 0;
 }
 
-/* About Section */
-.about-section {
-    padding: 40px 20px;
+header .subheading {
+    font-size: 1.2rem;
+    color: #ffecb3; /* Light yellow for subheading */
+    margin: 10px 0 0;
+}
+
+/* Call-to-Action Section */
+.cta-container {
     text-align: center;
-    color: #333;
+    margin: 40px 0;
 }
 
-/* About Header */
-.about-header {
+.cta-container h2 {
+    font-size: 2rem;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+.button-container {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: #f9f9f9; /* Light background strip */
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
 }
 
-.about-image-wrapper {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #bf4f43; /* Semi-circle border color */
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.about-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image fits proportionally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.name {
-    font-size: 2.8em;
-    color: #bf4f43; /* Deep red */
-}
-
-/* About Subsections */
-.about-details {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.about-subsection {
-    margin-bottom: 20px;
-}
-
-.about-subsection h3 {
-    font-size: 2em;
-    color: #bf4f43;
-    margin-bottom: 10px;
-}
-
-.about-subsection p, .about-subsection ul {
-    font-size: 1.4em;
-    color: #555;
-}
-
-.about-subsection ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.about-subsection li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.about-subsection li::before {
-    content: "•";
-    color: #bf4f43; /* Matching red */
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-
-/* Q&A Section */
-.qa {
-    margin-bottom: 20px;
-}
-
-.qa p {
-    font-size: 1.4em;
-    margin: 5px 0;
-}
-
-.qa p strong {
-    color: #bf4f43; /* Highlighted Q&A */
-}
-
-/* Cat Button */
-.cat-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #bf4f43;
-    color: white;
-    font-size: 1.4em;
-    border-radius: 5px;
-    text-decoration: none;
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    background: linear-gradient(to right, #1976d2, #42a5f5);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
 }
 
-.cat-button:hover {
-    background-color: #a33d34;
+.cta-button.secondary {
+    background: white;
+    color: #1976d2;
+    border: 2px solid #1976d2;
+}
+
+.cta-button:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* Highlights Section */
+.highlights {
+    background: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #90caf9;
+    border-bottom: 2px solid #90caf9;
+}
+
+.highlights h2 {
+    font-size: 2rem;
+    color: #1976d2;
+    margin-bottom: 30px;
+}
+
+.highlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f1f8ff;
+    padding: 20px;
+    border: 2px solid #bbdefb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #424242;
+    line-height: 1.6;
+}
+
+/* Footer Section */
 footer {
-    background-color: #bf4f43;
+    background-color: #1976d2;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-    font-size: 1em;
+    padding: 20px;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .about-header {
-        flex-direction: column;
-    }
-
-    .name {
-        font-size: 2.5em;
-    }
-
-    .about-details {
-        text-align: center;
-    }
+footer nav {
+    margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
+footer nav a {
+    color: #ffecb3;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1rem;
+}
 
-    .about-section {
-        padding: 20px;
-    }
+footer nav a:hover {
+    text-decoration: underline;
+}
 
-    .name {
-        font-size: 2.2em;
-    }
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin: 20px 0;
+}
 
-    .about-subsection h3 {
-        font-size: 1.6em;
-    }
-
-    .about-subsection p, .qa p {
-        font-size: 1.2em;
-    }
-
-    .cat-button {
-        font-size: 1.2em;
-        padding: 10px 25px;
-    }
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }

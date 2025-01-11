@@ -7,6 +7,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -17,8 +18,8 @@ header {
     color: white;
     padding: 20px 40px;
     display: flex;
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Horizontally center content */
+    align-items: center;
+    justify-content: center;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -27,8 +28,8 @@ header {
     position: absolute;
     left: 20px;
     top: 50%; /* Align vertically */
-    transform: translateY(-50%); /* Center alignment correction */
-    width: 150px; /* Adjust size */
+    transform: translateY(-50%);
+    width: 120px; /* Adjust logo size */
     height: auto;
 }
 
@@ -36,7 +37,7 @@ header {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Ensures content is centered */
+    align-items: center;
 }
 
 header h1 {
@@ -53,12 +54,13 @@ header h1 {
     justify-content: center; /* Center-align keywords */
 }
 
-/* Registration Section */
-.registration-container {
-    flex: 1;
+/* Login Form Section */
+main.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    width: 100%;
     padding: 20px;
 }
 
@@ -78,7 +80,7 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.register-form {
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -111,8 +113,8 @@ input:focus {
     outline: none;
 }
 
-/* Register Button */
-.register-button {
+/* Login Button */
+.login-button {
     padding: 12px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -124,44 +126,38 @@ input:focus {
     transition: background-color 0.3s, transform 0.2s ease;
 }
 
-.register-button:hover {
+.login-button:hover {
     background-color: #1565c0;
     transform: scale(1.05);
-}
-
-/* Login Link */
-.login-link {
-    margin-top: 15px;
-    font-size: 0.9rem;
-}
-
-.login-link a {
-    color: #1976d2;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
 }
 
 /* Footer */
 footer {
     width: 100%;
-    text-align: center;
-    padding: 20px;
     background-color: #1976d2;
     color: white;
-    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer nav {
+    margin-bottom: 10px;
 }
 
 footer nav a {
     color: #ffecb3;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 1rem;
 }
 
 footer nav a:hover {
     text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }

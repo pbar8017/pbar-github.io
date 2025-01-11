@@ -1,247 +1,149 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #1976d2, #42a5f5); /* Vibrant blue gradient */
     color: #333;
-    background-color: #fff;
-    line-height: 1.6; /* Slightly tighter line spacing */
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header */
+/* Header Section */
 header {
-    background-color: #bf4f43;
-    color: white;
-    padding: 15px 20px;
     text-align: center;
-    min-height: 10vh;
-}
-
-header h1 {
-    font-size: 3.5em; /* Slightly smaller */
-    margin-bottom: 5px;
-}
-
-.keywords {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: 2em; /* Adjusted keyword size */
-    gap: 15px; /* Reduced spacing */
-    flex-wrap: wrap;
-}
-
-/* Navigation Buttons */
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    display: inline-block;
-    background-color: white; /* White background for buttons */
-    color: #bf4f43; /* Header color for text */
-    text-decoration: none;
-    padding: 10px 20px; /* Comfortable padding */
-    margin: 0 10px; /* Space between buttons */
-    border: 2px solid #bf4f43; /* Border matching the header */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 1.2em; /* Slightly larger text */
-    font-weight: bold; /* Bold text for emphasis */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #bf4f43; /* Match header background */
-    color: white; /* White text on hover */
-}
-
-/* Hero Section (What do you want?) */
-.hero {
-    text-align: center;
-    padding: 40px 20px; /* Reduced padding */
-    background-color: #c2a4a1;
+    background-color: #1976d2;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 30vh; /* Reduced height */
-}
-
-.hero h2 {
-    font-size: 3.8em; /* Adjusted heading size */
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.5em; /* Reduced text size */
-    margin-bottom: 15px;
-}
-
-.arrow-container {
-    position: relative;
-    margin-bottom: 15px; /* Space between arrows and buttons */
-}
-
-.arrow {
-    display: block; /* Ensure arrows are above buttons */
-    font-size: 4em; /* Adjusted arrow size */
-    color: white;
-    margin: 5px auto; /* Center-align arrows */
-    animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Reduced button spacing */
-    flex-wrap: wrap;
-}
-
-.hero button {
-    background-color: #bf4f43;
-    color: white;
-    border: none;
-    padding: 15px 40px; /* Smaller button size */
-    font-size: 1.3em; /* Smaller button text */
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s;
+    padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero button:hover {
-    background-color: #a33d34;
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+header .subheading {
+    font-size: 1.2rem;
+    color: #ffecb3; /* Light yellow for subheading */
+    margin: 10px 0 0;
+}
+
+/* Call-to-Action Section */
+.cta-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-container h2 {
+    font-size: 2rem;
+    color: white; /* Match the button theme */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Add some shadow for better visibility */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #1976d2, #42a5f5);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #1565c0;
     transform: scale(1.05);
 }
 
-/* Projects Section */
-.projects-section {
-    background-color: #f9f9f9;
-    padding: 40px 15px; /* Reduced padding */
+/* Highlights Section */
+.highlights {
+    background: white;
+    padding: 40px 20px;
     text-align: center;
-    min-height: 40vh; /* Smaller section height */
+    border-top: 2px solid #90caf9;
+    border-bottom: 2px solid #90caf9;
 }
 
-.projects-section h2 {
-    font-size: 2.5em; /* Reduced heading size */
-    color: #bf4f43;
-    margin-bottom: 20px; /* Reduced margin */
+.highlights h2 {
+    font-size: 2rem;
+    color: #1976d2;
+    margin-bottom: 30px;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted card size */
-    gap: 15px; /* Reduced gap between cards */
-    justify-items: center;
-    align-items: start;
-    padding: 0 15px;
+.highlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.project-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+.card {
+    background-color: #f1f8ff;
+    padding: 20px;
+    border: 2px solid #bbdefb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
     text-align: center;
-    padding: 20px; /* Reduced padding */
-    width: 100%;
-    max-width: 350px; /* Smaller card width */
 }
 
-.project-card img {
-    max-width: 85%; /* Reduced image size */
-    height: auto;
-    margin-bottom: 10px; /* Reduced margin */
-    border-radius: 6px;
+.card h3 {
+    font-size: 1.5rem;
+    color: #1976d2;
+    margin-bottom: 15px;
 }
 
-.project-card h3 {
-    font-size: 1.8em; /* Smaller title size */
-    color: #bf4f43;
-    margin-bottom: 10px; /* Reduced margin */
+.card p {
+    font-size: 1rem;
+    color: #424242;
+    line-height: 1.6;
 }
 
-.project-card p {
-    font-size: 1.1em; /* Reduced description size */
-    color: #555;
-    margin-bottom: 10px; /* Reduced margin */
-}
-
-.project-card a {
-    display: inline-block;
-    padding: 10px 20px; /* Smaller button size */
-    color: white;
-    background-color: #bf4f43;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1em; /* Reduced button text size */
-    transition: background-color 0.3s ease;
-}
-
-.project-card a:hover {
-    background-color: #a33d34;
-}
-
-/* Footer */
+/* Footer Section */
 footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #bf4f43;
+    background-color: #1976d2;
     color: white;
-    min-height: 8vh;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .projects-section h2 {
-        font-size: 2.3em; /* Adjusted heading size */
-    }
-
-    .project-card {
-        padding: 15px; /* Adjusted padding for smaller screens */
-    }
-
-    .project-card h3 {
-        font-size: 1.6em; /* Adjusted title size */
-    }
-
-    .project-card p {
-        font-size: 1em; /* Adjusted description size */
-    }
+footer nav {
+    margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .projects-section h2 {
-        font-size: 2em; /* Adjusted heading size */
-    }
-
-    .project-card {
-        padding: 10px; /* Reduced padding */
-        max-width: 100%; /* Full width for smaller screens */
-    }
-
-    .project-card h3 {
-        font-size: 1.5em; /* Adjusted title size */
-    }
-
-    .project-card p {
-        font-size: 0.9em; /* Adjusted description size */
-    }
-
-    .project-card a {
-        font-size: 1em; /* Adjusted button text size */
-        padding: 8px 15px; /* Smaller button padding */
-    }
+footer nav a {
+    color: #ffecb3;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1rem;
 }
 
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
