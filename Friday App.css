@@ -108,7 +108,9 @@ main {
     font-size: 1.1rem;
     cursor: pointer;
     margin-top: 20px;
-    width: 100%;
+    width: 100%; /* Make it span the full width */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Ensure the button stays inline */
     transition: background-color 0.3s;
 }
 
