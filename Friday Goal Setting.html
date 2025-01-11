@@ -6,7 +6,26 @@
     <title>Goal Setting Screen</title>
     <link rel="stylesheet" href="Friday%20Goal%20Setting.css">
 </head>
+<header class="goals-header">
+    <div class="profile">
+        <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic">
+        <p>My Profile</p>
+    </div>
+    <h1>Goals</h1>
+    <div class="keywords">
+        <span class="creativity">🎨 Creativity</span>
+        <span class="growth">🌱 Growth</span>
+        <span class="innovation">⚙️ Innovation</span>
+        <span class="happiness">☀️ Happiness</span>
+    </div>
+    <nav>
+        <a href="index.html">PBAR Designs</a>
+        <a href="friday_home.html">Friday Home</a>
+        <a href="edutech.html">Friday EduTech</a>
+    </nav>
+</header>
 <body>
+
 <div class="container">
     <header>
         <h1>Set Your Goal</h1>
@@ -60,49 +79,34 @@
 </div>
 
 <script>
-    // Sticky Notes Functionality
-    const stickyNotesContainer = document.getElementById("sticky-notes-container");
-    const addStickyNoteButton = document.getElementById("add-sticky-note");
+    document.getElementById('save-draft').addEventListener('click', async () => {
+        const token = localStorage.getItem('token'); // Retrieve the user's token
 
-    addStickyNoteButton.addEventListener("click", () => {
-        const stickyNote = document.createElement("div");
-        stickyNote.classList.add("sticky-note");
-        stickyNote.contentEditable = true;
-        stickyNote.innerText = "Type your idea...";
-        stickyNotesContainer.appendChild(stickyNote);
-    });
+        if (!token) {
+            alert('Please log in to save your data.');
+            return;
+        }
 
-    // Add Steps Functionality
-    const stepsList = document.getElementById("steps-list");
-    const addStepButton = document.getElementById("add-step");
-
-    addStepButton.addEventListener("click", () => {
-        const newStep = document.createElement("li");
-        newStep.innerHTML = `<input type="text" placeholder="Add a milestone..." class="milestone">`;
-        stepsList.appendChild(newStep);
-    });
-
-    // Submit Data
-    document.getElementById("submit-goal").addEventListener("click", () => {
-        const goalData = {
-            title: document.getElementById("goal-title").value,
-            activity: document.getElementById("goal-activity").value,
-            purpose: document.getElementById("goal-purpose").value,
-            milestones: Array.from(document.querySelectorAll(".milestone")).map(input => input.value),
-            stickyNotes: Array.from(document.querySelectorAll(".sticky-note")).map(note => note.innerText)
+        const data = {
+            title: document.getElementById('goal-title').value,
+            activity: document.getElementById('goal-activity').value,
+            purpose: document.getElementById('goal-purpose').value,
+            milestones: Array.from(document.querySelectorAll('.milestone')).map(input => input.value)
         };
 
-        fetch('/save-goal', {
+        const response = await fetch('http://localhost:3000/save-data', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(goalData)
-        })
-            .then(response => response.json())
-            .then(data => {
-                alert("Goal saved successfully!");
-            })
-            .catch(err => console.error(err));
+            body: JSON.stringify({ token, data })
+        });
+
+        if (response.ok) {
+            alert('Data saved successfully!');
+        } else {
+            alert('Error saving data. Please try again.');
+        }
     });
 </script>
+
 </body>
 </html>

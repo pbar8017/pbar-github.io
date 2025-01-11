@@ -1,4 +1,168 @@
 /* styles.css */
+/* General Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Goals Header */
+.goals-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    border-bottom: 5px solid #3e8e41;
+}
+
+.goals-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.goals-header .profile {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.goals-header .keywords {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.goals-header .keywords span {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.goals-header nav {
+    margin-top: 15px;
+}
+
+.goals-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.goals-header nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Filters, Goals, Templates, and Guided Creation Sections */
+.filters, .recent-goals, .templates, .guided-creation {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filters h2, .recent-goals h2, .templates h2, .guided-creation h2 {
+    margin-bottom: 15px;
+    color: #4CAF50;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Filter Buttons */
+.filter-buttons, .template-buttons, .categories {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a, button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:hover, a:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Goal Grid */
+.goal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.goal-item {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.goal-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.goal-item:hover {
+    background-color: #e8e8e8;
+    transform: scale(1.03);
+}
+
+/* Footer */
+.pbar-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;

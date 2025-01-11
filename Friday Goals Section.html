@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="Friday%20Goal%20Section.css">
 </head>
 <body>
-<!-- Goals Header -->
-<header class="goals-header">
+<!-- Header -->
+<header class="edutech-header">
+    <div class="logo">
+        <img src="logo-placeholder.png" alt="PBAR Designs Logo">
+    </div>
     <div class="profile">
-        <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic">
+        <label for="profile-upload">
+            <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic">
+        </label>
+        <input type="file" id="profile-upload" accept="image/*">
         <p>My Profile</p>
     </div>
-    <h1>Goals</h1>
+    <h1>Goals Section</h1>
     <div class="keywords">
-        <span class="creativity">🎨 Creativity</span>
-        <span class="growth">🌱 Growth</span>
-        <span class="innovation">⚙️ Innovation</span>
-        <span class="happiness">☀️ Happiness</span>
+        <span>🎨 Creativity</span>
+        <span>🌱 Growth</span>
+        <span>⚙️ Innovation</span>
+        <span>☀️ Happiness</span>
     </div>
     <nav>
         <a href="index.html">PBAR Designs</a>
@@ -41,18 +47,18 @@
     </section>
 
     <!-- Recent Goals -->
-    <section class="recent-goals">
+    <section class="recent-goals gallery-section">
         <h2>Recent Goals</h2>
-        <div class="goal-grid">
-            <div class="goal-item">
+        <div class="gallery">
+            <div class="gallery-item">
                 <img src="goal-placeholder.png" alt="Goal Image">
                 <p>Goal Title</p>
             </div>
-            <div class="goal-item">
+            <div class="gallery-item">
                 <img src="goal-placeholder.png" alt="Goal Image">
                 <p>Goal Title</p>
             </div>
-            <div class="goal-item">
+            <div class="gallery-item">
                 <img src="goal-placeholder.png" alt="Goal Image">
                 <p>Goal Title</p>
             </div>
@@ -80,5 +86,27 @@
         </div>
     </section>
 </div>
+
+<!-- Footer -->
+<footer class="edutech-footer">
+    <p>&copy; 2024 PBAR Designs. Empowering creativity, growth, and innovation.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    const profilePic = document.getElementById("profile-pic");
+    const profileUpload = document.getElementById("profile-upload");
+
+    profileUpload.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                profilePic.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 </body>
 </html>

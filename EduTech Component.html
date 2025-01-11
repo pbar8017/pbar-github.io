@@ -3,86 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduTech Resources</title>
+    <title>EduTech Hub</title>
     <link rel="stylesheet" href="EduTech%20Component.css">
 </head>
 <body>
-<!-- PBAR Header -->
-<header class="pbar-header">
-    <h1>PBAR Designs</h1>
+<!-- Header -->
+<header class="edutech-header">
+    <div class="logo">
+        <img src="Images/Friday%20brand.png" alt="EduTech Hub Logo">
+    </div>
+    <div class="profile">
+        <label for="profile-upload">
+            <img src="profile-placeholder.png" alt="Profile Picture" class="profile-pic" id="profile-pic">
+        </label>
+        <input type="file" id="profile-upload" accept="image/*">
+        <p>Profile</p>
+    </div>
+    <h1>Friday's EduTech Hub</h1>
+    <div class="keywords">
+        <span>🎨 Creativity</span>
+        <span>🌱 Growth</span>
+        <span>⚙️ Innovation</span>
+        <span>☀️ Happiness</span>
+    </div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="friday_home.html">Friday Home</a>
-        <a href="edutech.html" class="active">EduTech</a>
-        <a href="social.html">Social</a>
-        <a href="goals.html">Goals</a>
+        <a href="Friday%20Goals%20Section.html">Goals Section</a>
+        <a href="Friday%20Social%20Section.html">Social Component</a>
+        <a href="Friday%20App.html">Back to Friday Home</a>
     </nav>
 </header>
 
-<!-- Main Container -->
+<!-- Main Content -->
 <div class="container">
-    <!-- Header Section -->
-    <header>
-        <h1>Educational Resources</h1>
-        <input type="text" class="search-bar" placeholder="🔍 Search for resources...">
-    </header>
+    <h2>Your one-stop hub for personalized educational resources and tools.</h2>
+    <input type="text" class="search-bar" placeholder="Search EduTech Resources...">
 
     <!-- Educational Resources by Mode -->
     <section class="resources-mode">
-        <h2>What do you want to learn?</h2>
         <div class="quadrants">
             <div class="quadrant">
-                <img src="practice_goal_setting.jpg" alt="Practice Goal Setting">
-                <p>Practice Goal Setting</p>
+                <h3>Practice Goal Setting</h3>
+                <button>Explore</button>
             </div>
             <div class="quadrant">
-                <img src="articles.jpg" alt="Articles">
-                <p>Articles</p>
+                <h3>Articles</h3>
+                <button>Read</button>
             </div>
             <div class="quadrant">
-                <img src="podcasts.jpg" alt="Podcasts">
-                <p>Podcasts</p>
+                <h3>Podcasts</h3>
+                <button>Listen</button>
             </div>
             <div class="quadrant">
-                <img src="master_classes.jpg" alt="Master Classes">
-                <p>Master Classes</p>
+                <h3>Master Classes</h3>
+                <button>Join</button>
             </div>
         </div>
     </section>
 
-    <!-- Last Viewed Section -->
+    <!-- Last Viewed -->
     <section class="last-viewed gallery-section">
         <h2>Last Viewed</h2>
         <div class="gallery">
-            <a href="podcast1.html" class="gallery-item">Recent Podcast</a>
-            <a href="masterclass1.html" class="gallery-item">Recent Master Class</a>
-            <a href="article1.html" class="gallery-item">Article</a>
+            <div class="gallery-item">Recent Podcast</div>
+            <div class="gallery-item">Recent Master Class</div>
+            <div class="gallery-item">Article</div>
         </div>
     </section>
 
-    <!-- Recommended Section -->
+    <!-- Recommended -->
     <section class="recommended gallery-section">
         <h2>Recommended</h2>
         <div class="gallery">
-            <a href="podcast2.html" class="gallery-item">Recent Podcast</a>
-            <a href="article2.html" class="gallery-item">Article</a>
-            <a href="masterclass2.html" class="gallery-item">Recent Master Class</a>
+            <div class="gallery-item">Recent Podcast</div>
+            <div class="gallery-item">Article</div>
+            <div class="gallery-item">Recent Master Class</div>
         </div>
     </section>
 
-    <!-- New/Trending Section -->
+    <!-- Trending -->
     <section class="new-trending gallery-section">
         <h2>New/Trending</h2>
         <div class="gallery">
-            <a href="podcast3.html" class="gallery-item">Recent Podcast</a>
-            <a href="article3.html" class="gallery-item">EduTech Article</a>
-            <a href="social_resource.html" class="gallery-item">Social Resource</a>
+            <div class="gallery-item">Recent Podcast</div>
+            <div class="gallery-item">EduTech Article</div>
+            <div class="gallery-item">Social Resource</div>
         </div>
     </section>
+</div>
 
-    <!-- PBAR Footer -->
-<footer class="pbar-footer">
-    <p>&copy; 2025 PBAR Designs. All Rights Reserved.</p>
+<!-- Footer -->
+<footer class="edutech-footer">
+    <p>&copy; 2024 PBAR Designs. Empowering creativity, growth, and innovation.</p>
 </footer>
+
+<!-- JavaScript -->
+<script>
+    const profilePic = document.getElementById("profile-pic");
+    const profileUpload = document.getElementById("profile-upload");
+
+    profileUpload.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                profilePic.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 </body>
 </html>

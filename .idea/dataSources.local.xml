@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="WS-242.23339.15">
-    <data-source name="@localhost" uuid="47a0d69c-f31d-4ea6-a326-8f3132526373">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL_AURORA" />
+  <component name="dataSourceStorageLocal" created-in="WS-242.20224.426">
+    <data-source name="sql12756717" uuid="3ccabdac-1910-46e2-8e3f-b190c9e7100d">
+      <database-info product="MySQL" version="5.5.62-0ubuntu0.14.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="5.5.62" exact-driver-version="8.2">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>pbar8017</user-name>
-      <schema-mapping />
-    </data-source>
-    <data-source name="HSQLDB (Local)" uuid="f98a3a0e-bede-4033-b351-80e7b01bda83">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="HSQLDB" />
-      <secret-storage>master_key</secret-storage>
-      <schema-mapping />
+      <user-name>sql12756717</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>
