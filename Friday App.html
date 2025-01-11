@@ -16,40 +16,127 @@
         <span class="innovation">⚙️ Innovation</span>
         <span class="happiness">☀️ Happiness</span>
     </div>
-
 </header>
+
 <!-- Main Content -->
-<main>
-    <!-- Goal Section -->
-    <section id="goals" class="feature-section" style="background-image: url('Images/Goal Section Banner.png');">
-        <div class="content">
-            <h2>Goal Section</h2>
-            <p>
-                Define, plan, and achieve your personal and professional goals with guided tools and templates.
-            </p>
-            <a href="Friday%20Goals%20Section.html" class="section-link">Explore Goals</a>
+<main class="dashboard-container">
+    <!-- Sidebar: Account Info -->
+    <aside class="account-sidebar">
+        <div class="account-info">
+            <!-- Profile Picture Circle (Clickable) -->
+            <div class="profile-pic-container">
+                <label for="fileInput" class="profile-pic">
+                    <img src="profile-picture-placeholder.jpg" alt="Profile Picture" class="profile-pic-image" id="profilePic">
+                    <span class="edit-text">Edit</span>
+                </label>
+                <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="previewImage(event)">
+            </div>
+
+            <h3>Account Info</h3>
+            <p><strong>Username:</strong> Portia Bardsley</p>
+            <p><strong>Followers:</strong> 150</p>
+            <p><strong>Following:</strong> 50</p>
+            <p><strong>Activities:</strong> 6</p>
+        </div>
+
+        <!-- Latest Activity -->
+        <div class="latest-activity">
+            <h4>Latest Activity</h4>
+            <p>Played golf at Hillside Golf Club - 7.05 km</p>
+        </div>
+
+        <!-- Quick Goal Creation Button -->
+        <a href="Friday%20Goal%20Setting.html" class="btn">Create New Goal</a>
+
+        <!-- Goals Section with Icons -->
+        <div class="goals-section">
+            <h3>Your Goals</h3>
+            <div class="goal-icons">
+                <div class="goal-icon" id="financeGoal" onclick="showGoal('finance')">
+                    <img src="finance-icon.jpg" alt="Finance Goal" class="goal-icon-image">
+                    <p>Finance</p>
+                </div>
+                <div class="goal-icon" id="sportGoal" onclick="showGoal('sport')">
+                    <img src="sport-icon.jpg" alt="Sport Goal" class="goal-icon-image">
+                    <p>Sport</p>
+                </div>
+                <div class="goal-icon" id="jobGoal" onclick="showGoal('job')">
+                    <img src="job-icon.jpg" alt="Job Goal" class="goal-icon-image">
+                    <p>Job</p>
+                </div>
+            </div>
+            <div class="goal-details" id="goalDetails">
+                <!-- Automatically show the finance goal on page load -->
+                <h4>Finance Goal</h4>
+                <p>Track your monthly spending and save for your goals!</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Feed: Social Section (Center) -->
+    <section id="social" class="feed-section">
+        <div class="feed-header">
+            <h2>Activity Feed</h2>
+            <p>Scroll down to see your friends' activities.</p>
+        </div>
+
+        <!-- Feed Content -->
+        <div class="feed-content">
+            <div class="feed-item">
+                <div class="feed-item-header">
+                    <strong>Christopher Trevor Lee Lodder</strong>
+                    <span>Yesterday at 07:50</span>
+                </div>
+                <p>Played a round of golf at Hillside Golf Club</p>
+                <div class="feed-item-map">
+                    <img src="golf-course-map.jpg" alt="Golf Course Map">
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-item-header">
+                    <strong>Mariana Landeo</strong>
+                    <span>9th January 2025</span>
+                </div>
+                <p>Tracked monthly budget: Spent 3% under budget</p>
+                <div class="feed-item-finance">
+                    <img src="budgeting-chart.jpg" alt="Budgeting Chart">
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-item-header">
+                    <strong>Rachel Nolan</strong>
+                    <span>Today at 10:30</span>
+                </div>
+                <p>Planning for a new job, creating a resume and researching companies</p>
+                <div class="feed-item-job-planning">
+                    <img src="job-planning-checklist.jpg" alt="Job Planning Checklist">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- EduTech Section -->
-    <section id="edutech" class="feature-section" style="background-image: url('Images/EduTech Section Banner.png');">
-        <div class="content">
-            <h2>EduTech Section</h2>
-            <p>
-                Access curated educational resources like articles, podcasts, and masterclasses to help you grow.
-            </p>
-            <a href="EduTech%20Component.html" class="section-link">Explore EduTech</a>
-        </div>
-    </section>
-
-    <!-- Social Section -->
-    <section id="social" class="feature-section" style="background-image: url('Images/Social Section Banner.png');">
-        <div class="content">
-            <h2>Social Section</h2>
-            <p>
-                Connect with a community of like-minded individuals to share your journey and gain inspiration.
-            </p>
-            <a href="Friday%20Social%20Section.html" class="section-link">Explore Social</a>
+    <!-- EduTech Section (Right Side) -->
+    <section class="edutech-section">
+        <div class="edutech-recommendations">
+            <h3>Recommended EduTech Resources</h3>
+            <div class="edutech-link">
+                <p><strong>Practice Goal Setting</strong></p>
+                <button class="edutech-button" onclick="window.location.href='practice_goal_setting.html'">Explore</button>
+            </div>
+            <div class="edutech-link">
+                <p><strong>Articles</strong></p>
+                <button class="edutech-button" onclick="window.location.href='Friday EduTech Component.html'">Read</button>
+            </div>
+            <div class="edutech-link">
+                <p><strong>Podcasts</strong></p>
+                <button class="edutech-button" onclick="window.location.href='podcasts.html'">Listen</button>
+            </div>
+            <div class="edutech-link">
+                <p><strong>Master Classes</strong></p>
+                <button class="edutech-button" onclick="window.location.href='master_classes.html'">Join</button>
+            </div>
         </div>
     </section>
 </main>
@@ -62,5 +149,30 @@
     </nav>
     <p>&copy; 2024 PBAR Designs. All rights reserved.</p>
 </footer>
+
+<script>
+    // Function to preview the selected profile picture
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('profilePic');
+            output.src = reader.result; // Set the image source to the selected file
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // Function to show specific goal details based on icon clicked
+    function showGoal(goalType) {
+        let goalDetails = document.getElementById('goalDetails');
+        if (goalType === 'finance') {
+            goalDetails.innerHTML = "<h4>Finance Goal</h4><p>Track your monthly spending and save for your goals!</p>";
+        } else if (goalType === 'sport') {
+            goalDetails.innerHTML = "<h4>Sport Goal</h4><p>Play 3 rounds of golf this month.</p>";
+        } else if (goalType === 'job') {
+            goalDetails.innerHTML = "<h4>Job Goal</h4><p>Research 5 companies for job opportunities.</p>";
+        }
+    }
+</script>
+
 </body>
 </html>

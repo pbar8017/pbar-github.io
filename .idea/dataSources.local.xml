@@ -16,5 +16,11 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="@pbar-server.database.windows.net" uuid="9485a453-d0ab-4e47-807b-065cf88112f1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="AZURE" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>CloudSA5fa1a9f4</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

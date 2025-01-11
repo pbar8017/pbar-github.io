@@ -1,119 +1,277 @@
-/* General Reset */
+/* General Styles */
 body {
-    margin: 0;
-    padding: 0px;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Header */
 header {
-    text-align: center;
     background-color: #1976d2;
     color: white;
     padding: 20px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Main Section */
-main{
-    padding: 10px;
-}
-
-/* Feature Section */
-.feature-section {
-    position: relative;
-    height: 300px; /* Section height */
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    background-size: cover; /* Make the background cover the whole section */
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    overflow: hidden;
-    transition: transform 0.3s ease;
 }
 
-.feature-section:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
+header .keywords {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.2rem;
 }
 
-.feature-section .content {
-    position: relative;
-    z-index: 2; /* Ensure text is above the background image */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+main {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    border-radius: 10px;
+    margin-top: 20px;
+    gap: 20px;
 }
 
-.feature-section h2 {
-    font-size: 2em;
+/* Sidebar (Account Info) */
+.account-sidebar {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile Picture Section */
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-pic-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-text {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+}
+
+/* Account Info Section */
+.account-info {
+    text-align: center;
+}
+
+.account-info h3 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.feature-section p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
+.account-info p {
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
-.feature-section .section-link {
-    display: inline-block;
+/* Latest Activity */
+.latest-activity {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Create New Goal Button */
+.create-goal-btn {
+    background-color: #1976d2;
     color: white;
-    text-decoration: none;
-    background-color: #0d47a1;
     padding: 10px 20px;
-    font-size: 1em;
-    font-weight: bold;
+    border: none;
     border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.create-goal-btn:hover {
+    background-color: #1565c0;
+}
+
+/* Goals Section */
+.goals-section {
+    margin-top: 20px;
+}
+
+.goal-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.goal-icon {
+    text-align: center;
+    cursor: pointer;
+}
+
+.goal-icon-image {
+    width: 50px;
+    height: 50px;
+}
+
+.goal-details {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+/* EduTech Section */
+.edutech-section {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* EduTech Recommendations Section */
+.edutech-recommendations {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 2px solid #eeeeee;
+    width: 100%;
+}
+
+.edutech-link {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.edutech-button {
+    background-color: #1E88E5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
     transition: background-color 0.3s ease;
 }
 
-.feature-section .section-link:hover {
-    background-color: #1976d2;
+.edutech-button:hover {
+    background-color: #1565C0;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #1976d2;
-    color: white;
-    min-height: 8vh;
+/* Feed Section */
+.feed-section {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 80vh;
 }
-/* Navigation Buttons */
-nav {
+
+.feed-header h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.feed-header p {
+    color: #777;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.feed-content {
+    margin-top: 20px;
+}
+
+.feed-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feed-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #1976d2;
+}
+
+.feed-item-header strong {
+    font-size: 1.2rem;
+}
+
+/* For Golf Activity */
+.feed-item-map img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
     margin-top: 10px;
 }
 
-nav a {
-    display: inline-block;
-    background-color: white; /* White background for buttons */
-    color: #1976d2; /* Header color for text */
-    text-decoration: none;
-    padding: 10px 20px; /* Comfortable padding */
-    margin: 0 10px; /* Space between buttons */
-    border: 2px solid #1976d2; /* Border matching the header */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 1.2em; /* Slightly larger text */
-    font-weight: bold; /* Bold text for emphasis */
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* For Budgeting Activity */
+.feed-item-finance img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #e0f7fa;
 }
 
-nav a:hover {
-    background-color: #1976d2; /* Match header background */
-    color: white; /* White text on hover */
+/* For Job Planning Activity */
+.feed-item-job-planning img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #e3f2fd;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer nav {
+    margin-bottom: 10px;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
 }

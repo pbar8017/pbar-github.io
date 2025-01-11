@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Friday</title>
     <link rel="stylesheet" href="register.css">
+    <script>
+        // JavaScript to handle the form submission
+        async function handleRegister(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, email, password }),
+                });
+
+                if (!response.ok) {
+                    const error = await response.text(); // Fetch error message
+                    throw new Error(error);
+                }
+
+                const result = await response.json();
+                alert('Account successfully created! Redirecting to your activity page...');
+                window.location.href = 'activity.html'; // Redirect to activity page
+            } catch (error) {
+                console.error('Error registering:', error);
+                alert(`Failed to create account: ${error.message}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const registerForm = document.getElementById('register-form');
+            registerForm.addEventListener('submit', handleRegister);
+        });
+    </script>
 </head>
 <body>
 <!-- Header Section -->

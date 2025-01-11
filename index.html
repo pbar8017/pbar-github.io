@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friday</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+        // JavaScript to handle the form submission
+        async function handleRegister(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username, email, password }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                alert('Account successfully created! Redirecting to Friday app...');
+
+                // Redirect to Friday page
+                window.location.href = "https://pbar8017.github.io/pbar-github.io/";
+
+            } catch (error) {
+                console.error('Error registering:', error);
+                alert('Failed to create account. Please try again later.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const registerForm = document.getElementById('register-form');
+            registerForm.addEventListener('submit', handleRegister);
+        });
+    </script>
 </head>
 <body>
 <!-- Header -->
@@ -21,11 +60,6 @@
             </div>
         </div>
     </div>
-    <nav class="header-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
 
 <!-- Hero Section -->

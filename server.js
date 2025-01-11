@@ -6,33 +6,44 @@ const cors = require('cors');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 3000; // Use dynamic port for deployment
+const port = process.env.PORT || 3000;  // Use port 3000 for the Express app to avoid MySQL conflict
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:63342',  // Allow frontend (running on a different port)
+}));
 app.use(bodyParser.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'sql12.freesqldatabase.com', // Use .env for database credentials
-    user: process.env.DB_USER || 'sql12756717',
-    password: process.env.DB_PASSWORD || '1y1LtGdjF4',
-    database: process.env.DB_NAME || 'sql12756717'
+    host: process.env.DB_HOST || 'pbar-server.database.windows.net',
+    user: process.env.DB_USER || 'CloudSA5fa1a9f4',
+    password: process.env.DB_PASSWORD || 'HwFENY,O?nv:S-"^f*<S+4%$)0&',
+    database: process.env.DB_NAME || 'CloudSA5fa1a9f4'
 });
 
 db.connect(err => {
     if (err) {
-        console.error('Error connecting to the database:', err.message || err);
+        console.error('Error connecting to the database:', err.message);
         return;
     }
     console.log('Connected to the MySQL database.');
 });
 
-// Handle Registration Request
+// Test query for database connection (optional for debugging)
+db.query('SELECT 1', (err, results) => {
+    if (err) {
+        console.error('Database test query failed:', err.message);
+    } else {
+        console.log('Database test query successful:', results);
+    }
+});
+
+// Registration Endpoint
 app.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
 
-    // Input Validation
+    // Input validation
     if (!username || username.length < 3) {
         return res.status(400).send('Username must be at least 3 characters long.');
     }
@@ -47,7 +58,7 @@ app.post('/register', async (req, res) => {
     }
 
     try {
-        // Hash Password
+        // Hash the password
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const query = `
@@ -55,39 +66,23 @@ app.post('/register', async (req, res) => {
             VALUES (?, ?, ?, NOW())
         `;
 
-        // Insert User into Database
         db.query(query, [username, email, hashedPassword], (err, results) => {
             if (err) {
-                console.error('Error inserting data:', err.message || err);
+                console.error('Error inserting data:', err.message);
                 if (err.code === 'ER_DUP_ENTRY') {
                     return res.status(400).send('Username or email already exists.');
                 }
-                return res.status(500).send('Server error.');
+                return res.status(500).send('Server error while inserting data.');
             }
-            res.status(201).send('User registered successfully.');
+            res.status(201).json({ message: 'User registered successfully.' });
         });
     } catch (error) {
         console.error('Error hashing password:', error);
-        res.status(500).send('Server error.');
+        res.status(500).send('Server error while hashing the password.');
     }
 });
 
-// Health Check Route
-app.get('/health', (req, res) => {
-    res.status(200).send('Server is healthy!');
-});
-
-// Error Handling Middleware
-app.use((err, req, res, next) => {
-    console.error('Unhandled error:', err.stack);
-    res.status(500).send('An unexpected error occurred.');
-});
-
-// Start the Server
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
-
+// Login Endpoint
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -99,8 +94,8 @@ app.post('/login', async (req, res) => {
 
     db.query(query, [email], async (err, results) => {
         if (err) {
-            console.error('Error fetching data:', err.message || err);
-            return res.status(500).send('Server error.');
+            console.error('Error fetching data:', err.message);
+            return res.status(500).send('Server error while fetching data.');
         }
 
         if (results.length === 0) {
@@ -114,6 +109,22 @@ app.post('/login', async (req, res) => {
             return res.status(400).send('Invalid email or password.');
         }
 
-        res.status(200).send('Login successful!');
+        res.status(200).json({ message: 'Login successful!' });
     });
+});
+
+// Health Check Endpoint
+app.get('/health', (req, res) => {
+    res.status(200).send('Server is healthy!');
+});
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+    console.error('Unhandled error:', err.stack);
+    res.status(500).send('An unexpected error occurred.');
+});
+
+// Start the Server
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
 });
