@@ -1,4 +1,6 @@
+
 USE sql12756717;
+
 CREATE TABLE login_credentials (
                                    user_id INT AUTO_INCREMENT PRIMARY KEY,
                                    username VARCHAR(50) NOT NULL UNIQUE,

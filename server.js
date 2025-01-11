@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
@@ -13,10 +14,10 @@ app.use(bodyParser.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: 'sql12.freesqldatabase.com', // Ensure correct host
-    user: 'sql12756717',      // Replace with your MySQL username
-    password: '1y1LtGdjF4',  // Replace with your MySQL password
-    database: 'sql12756717'    // Replace with your database name
+    host: 'sql12.freesqldatabase.com',
+    user: 'sql12756717',
+    password: '1y1LtGdjF4',
+    database: 'sql12756717'
 });
 
 db.connect(err => {
@@ -31,8 +32,17 @@ db.connect(err => {
 app.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
 
-    if (!username || !email || !password) {
-        return res.status(400).send('All fields are required.');
+    if (!username || username.length < 3) {
+        return res.status(400).send('Username must be at least 3 characters long.');
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+        return res.status(400).send('Invalid email format.');
+    }
+
+    if (!password || password.length < 8) {
+        return res.status(400).send('Password must be at least 8 characters long.');
     }
 
     try {
@@ -46,6 +56,9 @@ app.post('/register', async (req, res) => {
         db.query(query, [username, email, hashedPassword], (err, results) => {
             if (err) {
                 console.error('Error inserting data:', err.message || err);
+                if (err.code === 'ER_DUP_ENTRY') {
+                    return res.status(400).send('Username or email already exists.');
+                }
                 return res.status(500).send('Server error.');
             }
             res.status(201).send('User registered successfully.');
@@ -54,6 +67,11 @@ app.post('/register', async (req, res) => {
         console.error('Error hashing password:', error);
         res.status(500).send('Server error.');
     }
+});
+
+// Health Check Route
+app.get('/health', (req, res) => {
+    res.status(200).send('Server is healthy!');
 });
 
 // Start the Server
