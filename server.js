@@ -1,62 +1,56 @@
 const express = require('express');
+const mysql = require('mysql');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2');
-const bcrypt = require('bcrypt');
 const cors = require('cors');
 
 const app = express();
-app.use(bodyParser.json());
-app.use(cors()); // Enable CORS for cross-origin requests
+const port = 3000;
 
-// Database connection
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// MySQL Connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'your_mysql_username', // Replace with your MySQL username
-    password: 'your_mysql_password', // Replace with your MySQL password
-    database: 'goal_setting_app'
+    host: 'sql12.freesqldatabase.com\n', // Change this to your database host (e.g., '127.0.0.1')
+    user: 'ctllodder@gmail.com',      // Your MySQL username
+    password: 'PBardsleyCLodder558087!\n',      // Your MySQL password
+    database: 'freesqldatabase' // Replace with your database name
 });
 
 db.connect(err => {
     if (err) {
-        console.error('Error connecting to database:', err);
+        console.error('Error connecting to the database:', err);
         return;
     }
-    console.log('Connected to MySQL database');
+    console.log('Connected to the MySQL database.');
 });
 
-// API endpoint to register a user
+// Handle Registration Request
 app.post('/register', (req, res) => {
     const { username, email, password } = req.body;
 
-    // Validate input
+    // Check for missing fields
     if (!username || !email || !password) {
-        return res.status(400).send('All fields are required');
+        return res.status(400).send('All fields are required.');
     }
 
-    // Hash the password
-    bcrypt.hash(password, 10, (err, hash) => {
-        if (err) {
-            console.error('Error hashing password:', err);
-            return res.status(500).send('Internal server error');
-        }
+    // Insert into the database
+    const query = `
+        INSERT INTO login_credentials (username, email, password_hash, date_created)
+        VALUES (?, ?, ?, NOW())
+    `;
 
-        // Insert user into the database
-        const sql = 'INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)';
-        db.query(sql, [username, email, hash], (err, result) => {
-            if (err) {
-                console.error('Error inserting user:', err);
-                if (err.code === 'ER_DUP_ENTRY') {
-                    return res.status(400).send('Username or email already exists');
-                }
-                return res.status(500).send('Internal server error');
-            }
-            res.status(201).send('User registered successfully');
-        });
+    db.query(query, [username, email, password], (err, results) => {
+        if (err) {
+            console.error('Error inserting data:', err);
+            return res.status(500).send('Server error.');
+        }
+        res.status(201).send('User registered successfully.');
     });
 });
 
-// Start the server
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+// Start the Server
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
 });
