@@ -16,6 +16,12 @@
         <span class="innovation">⚙️ Innovation</span>
         <span class="happiness">☀️ Happiness</span>
     </div>
+    <nav class="main-nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#goals">Goals</a>
+        <a href="#resources">Resources</a>
+        <a href="#communities">Communities</a>
+    </nav>
 </header>
 
 <!-- Main Content -->
@@ -26,14 +32,13 @@
             <!-- Profile Picture Circle (Clickable) -->
             <div class="profile-pic-container">
                 <label for="fileInput" class="profile-pic">
-                    <img src="profile-picture-placeholder.jpg" alt="Profile Picture" class="profile-pic-image" id="profilePic">
+                    <img src="ghost-person.png" alt="Profile Picture" class="profile-pic-image" id="profilePic">
                     <span class="edit-text">Edit</span>
                 </label>
                 <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="previewImage(event)">
             </div>
 
-            <h3>Account Info</h3>
-            <p><strong>Username:</strong> Portia Bardsley</p>
+            <h3 class="username">Portia Bardsley</h3>
             <p><strong>Followers:</strong> 150</p>
             <p><strong>Following:</strong> 50</p>
             <p><strong>Activities:</strong> 6</p>
@@ -42,11 +47,11 @@
         <!-- Latest Activity -->
         <div class="latest-activity">
             <h4>Latest Activity</h4>
-            <p>Played golf at Hillside Golf Club - 7.05 km</p>
+            <p>Morning Run - 21 Jan 2025</p>
         </div>
 
         <!-- Quick Goal Creation Button -->
-        <a href="Friday%20Goal%20Setting.html" class="btn create-goal-btn">Create New Goal</a>
+        <a href="Friday%20Goal%20Setting.html" class="btn">Create a Goal</a>
 
         <!-- Goals Section with Icons -->
         <div class="goals-section">
@@ -84,40 +89,58 @@
         <div class="feed-content">
             <div class="feed-item">
                 <div class="feed-item-header">
-                    <strong>Christopher Trevor Lee Lodder</strong>
+                    <a href="profile.html#ChristopherTrevorLeeLodder" class="user-link">
+                        <img src="christopher-profile.jpg" alt="Christopher's Profile" class="profile-pic-small">
+                        <strong>Christopher Trevor Lee Lodder</strong>
+                    </a>
                     <span>Yesterday at 07:50</span>
                 </div>
-                <p>Played a round of golf at Hillside Golf Club</p>
+                <p>Working on improving his golf skills at Lowwood Golf Club.</p>
                 <div class="feed-item-map">
                     <img src="golf-course-map.jpg" alt="Golf Course Map">
                 </div>
+                <div class="goal">
+                    <strong>Goal:</strong> Play 18 holes this week.
+                </div>
             </div>
 
             <div class="feed-item">
                 <div class="feed-item-header">
-                    <strong>Mariana Landeo</strong>
+                    <a href="profile.html#MarianaLandeo" class="user-link">
+                        <img src="mariana-profile.jpg" alt="Mariana's Profile" class="profile-pic-small">
+                        <strong>Mariana Landeo</strong>
+                    </a>
                     <span>9th January 2025</span>
                 </div>
-                <p>Tracked monthly budget: Spent 3% under budget</p>
+                <p>Focusing on self-care and personal growth.</p>
                 <div class="feed-item-finance">
                     <img src="budgeting-chart.jpg" alt="Budgeting Chart">
                 </div>
+                <div class="goal">
+                    <strong>Goal:</strong> Meditate for 15 minutes daily.
+                </div>
             </div>
 
             <div class="feed-item">
                 <div class="feed-item-header">
-                    <strong>Rachel Nolan</strong>
+                    <a href="profile.html#RachelNolan" class="user-link">
+                        <img src="rachel-profile.jpg" alt="Rachel's Profile" class="profile-pic-small">
+                        <strong>Rachel Nolan</strong>
+                    </a>
                     <span>Today at 10:30</span>
                 </div>
-                <p>Planning for a new job, creating a resume and researching companies</p>
+                <p>Exploring career options and opportunities for a fresh start.</p>
                 <div class="feed-item-job-planning">
                     <img src="job-planning-checklist.jpg" alt="Job Planning Checklist">
+                </div>
+                <div class="goal">
+                    <strong>Goal:</strong> Research and apply for 3 job roles this week.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EduTech Section (Right Side) -->
+    <!-- Recommended Resources (Right Side) -->
     <section class="edutech-section">
         <div class="edutech-recommendations">
             <h3>Recommended EduTech Resources</h3>
@@ -147,7 +170,7 @@
         <a href="index.html">PBAR Designs</a>
         <a href="about.html">About</a>
     </nav>
-    <p>&copy; 2024 PBAR Designs. All rights reserved.</p>
+    <p>&copy; 2025 Friday. All rights reserved.</p>
 </footer>
 
 <script>

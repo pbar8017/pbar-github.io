@@ -10,47 +10,44 @@ body {
     min-height: 100vh;
 }
 
-/* Header Section */
+/* Header Styles */
 header {
-    width: 100%;
-    background-color: #1976d2; /* Deep blue */
-    color: white;
-    padding: 20px 40px;
     display: flex;
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Horizontally center content */
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-between; /* Ensure logo and text are spaced */
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .friday-logo {
-    position: absolute;
-    left: 20px;
-    top: 50%; /* Align vertically */
-    transform: translateY(-50%); /* Center alignment correction */
-    width: 150px; /* Adjust size */
+    max-width: 80px; /* Adjust as needed */
     height: auto;
 }
 
 .header-text {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures content is centered */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    flex-grow: 1;
+    text-align: center; /* Center the text in the remaining space */
 }
 
 .keywords {
-    display: flex;
-    gap: 10px;
-    font-size: 1.2rem;
-    color: #ffecb3; /* Light yellow for keywords */
     margin-top: 5px;
-    justify-content: center; /* Center-align keywords */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 /* Registration Section */

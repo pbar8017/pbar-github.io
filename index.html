@@ -6,10 +6,8 @@
     <title>Friday</title>
     <link rel="stylesheet" href="index.css">
     <script>
-        // JavaScript to handle the form submission
         async function handleRegister(event) {
-            event.preventDefault(); // Prevent form from refreshing the page
-
+            event.preventDefault();
             const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -27,22 +25,13 @@
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
 
-                const result = await response.json();
-                alert('Account successfully created! Redirecting to Friday app...');
-
-                // Redirect to Friday page
+                alert('Account successfully created! Redirecting...');
                 window.location.href = "https://pbar8017.github.io/pbar-github.io/";
-
             } catch (error) {
-                console.error('Error registering:', error);
-                alert('Failed to create account. Please try again later.');
+                console.error('Error:', error);
+                alert('Failed to create account. Try again later.');
             }
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const registerForm = document.getElementById('register-form');
-            registerForm.addEventListener('submit', handleRegister);
-        });
     </script>
 </head>
 <body>
@@ -77,7 +66,7 @@
 <!-- Footer -->
 <footer>
     <div class="footer-content">
-        <img src="footer-logo.png" alt="Friday Logo" class="footer-logo-left">
+        <img src="Images/Friday%20brand.png" alt="Friday Logo" class="footer-logo-left">
         <nav>
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms of Service</a>
