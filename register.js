@@ -1,4 +1,4 @@
-// Register form submission handler
+// JavaScript to handle the form submission
 async function handleRegister(event) {
     event.preventDefault(); // Prevent form from refreshing the page
 
@@ -7,7 +7,7 @@ async function handleRegister(event) {
     const password = document.getElementById('password').value;
 
     try {
-        // Send registration data to the backend
+        // Send the registration data to the backend
         const response = await fetch('http://localhost:3000/register', {
             method: 'POST',
             headers: {
@@ -22,10 +22,8 @@ async function handleRegister(event) {
         }
 
         const result = await response.json();
-        alert('Account successfully created! Redirecting to your activity feed...');
-
-        // Redirect to the Friday App activity feed page after registration
-        window.location.href = 'Friday App.html'; // Make sure this is the correct file path
+        alert('Account successfully created! Redirecting to your activity page...');
+        window.location.href = 'Friday App.html'; // Redirect to activity page after registration
     } catch (error) {
         console.error('Error registering:', error);
         alert(`Failed to create account: ${error.message}`);
