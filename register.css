@@ -1,164 +1,83 @@
-/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f4f9fc;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #1976d2, #42a5f5); /* Vibrant blue gradient */
-    color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-/* Header Styles */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensure logo and text are spaced */
-    background-color: #1976d2;
-    color: white;
-    padding: 10px 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .logo-container {
     display: flex;
-    align-items: center;
-    text-decoration: none;
+    justify-content: center;
 }
 
 .friday-logo {
-    max-width: 80px; /* Adjust as needed */
-    height: auto;
+    max-width: 200px;
 }
 
-.header-text {
-    flex-grow: 1;
-    text-align: center; /* Center the text in the remaining space */
-}
-
-.keywords {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1rem;
-}
-
-h1 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-/* Registration Section */
-.registration-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.form-wrapper {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+main {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 500px;
+}
+
+h2 {
     text-align: center;
+    color: #2e3a59;
 }
 
-.form-wrapper h2 {
-    font-size: 2rem;
-    color: #1976d2;
-    margin-bottom: 20px;
-}
-
-.register-form {
+.form-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    text-align: left;
 }
 
 label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #1976d2; /* Deep blue */
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #6b7c93;
 }
 
 input {
     padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
-input:focus {
-    border-color: #1976d2;
-    box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
-    outline: none;
-}
-
-/* Register Button */
-.register-button {
+button {
+    background-color: #2e3a59;
+    color: #fff;
     padding: 12px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(to right, #1976d2, #42a5f5);
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
 }
 
-.register-button:hover {
-    background-color: #1565c0;
-    transform: scale(1.05);
+button:hover {
+    background-color: #1a2533;
 }
 
-/* Login Link */
-.login-link {
-    margin-top: 15px;
-    font-size: 0.9rem;
-}
-
-.login-link a {
-    color: #1976d2;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
-    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6b7c93;
     text-align: center;
-    padding: 20px;
-    background-color: #1976d2;
-    color: white;
-    margin-top: auto;
-}
-
-footer nav a {
-    color: #ffecb3;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
-footer nav a:hover {
-    text-decoration: underline;
 }
