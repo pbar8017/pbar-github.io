@@ -24,8 +24,8 @@
                 });
 
                 if (!response.ok) {
-                    const error = await response.text(); // Fetch error message
-                    throw new Error(error);
+                    const error = await response.json(); // Fetch error message
+                    throw new Error(error.message);
                 }
 
                 const result = await response.json();
