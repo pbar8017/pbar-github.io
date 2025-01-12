@@ -4,53 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Friday</title>
-    <link rel="stylesheet" href="register.css">
-    <script src="register.js" defer></script> <!-- Include the JS file -->
+    <link rel="stylesheet" href="register.css">  <!-- Include the CSS file -->
+    <script src="register.js" defer></script>   <!-- Include the JS file -->
 </head>
 <body>
 <header>
-    <div class="header-container">
-        <a href="index.html" class="logo-container">
-            <img src="Images/Friday%20brand.png" alt="Friday Logo" class="logo">
-        </a>
-        <div class="header-text">
-            <h1>Friday</h1>
-            <div class="keywords">
-                <span>🎨 Creativity</span>
-                <span>🌱 Growth</span>
-                <span>⚙️ Innovation</span>
-                <span>☀️ Happiness</span>
-            </div>
-        </div>
-    </div>
+    <h1>Welcome to Friday</h1>
 </header>
 
-<main class="register-container">
-    <div class="form-wrapper">
-        <h2>Create Your Account</h2>
-        <form id="register-form">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Create a password" required>
-            </div>
-            <button type="submit" class="register-button">Register</button>
-        </form>
-        <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
-    </div>
+<main>
+    <h2>Create Your Account</h2>
+    <form id="register-form">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
 </main>
 
 <footer>
-    <nav>
-        <a href="index.html">Friday</a>
-    </nav>
     <p>&copy; 2024 PBAR Designs. All rights reserved.</p>
 </footer>
 </body>
